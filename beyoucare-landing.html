@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeYou Care - 14 Marzo 2026 | Evento Cuidado Personal Alicante</title>
+    <meta name="description" content="BeYou Care - Evento sobre cuidado de la piel y cabello con expertos en dermatología y tricología. 14 de marzo en IFA Alicante.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cyan: #00BCD4;
+            --cyan-dark: #0097A7;
+            --cyan-light: #B2EBF2;
+            --cyan-pale: #E0F7FA;
+            --gray-dark: #2C3E50;
+            --gray-medium: #5D6D7E;
+            --gray-light: #BDC3C7;
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-dark);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            padding: 18px 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: padding 0.3s;
+        }
+
+        header.scrolled {
+            padding: 12px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 36px;
+            width: auto;
+        }
+
+        .header-btn {
+            background: var(--cyan);
+            color: white;
+            padding: 11px 26px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .header-btn:hover {
+            background: var(--cyan-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 72px;
+            padding: 80px 0 60px;
+            background: linear-gradient(to bottom, var(--cyan-pale), var(--white));
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--cyan);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 18px;
+            color: var(--gray-dark);
+        }
+
+        .hero h1 span {
+            color: var(--cyan);
+        }
+
+        .hero-text {
+            font-size: 19px;
+            color: var(--gray-medium);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: var(--cyan-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--cyan);
+            padding: 16px 36px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.2s;
+            border: 2px solid var(--cyan);
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--cyan);
+            color: white;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Info boxes */
+        .info-section {
+            padding: 64px 0;
+        }
+
+        .info-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .info-box {
+            background: var(--off-white);
+            padding: 36px 28px;
+            border-radius: 8px;
+            border-left: 4px solid var(--cyan);
+        }
+
+        .info-box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--gray-dark);
+        }
+
+        .info-box p {
+            color: var(--gray-medium);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* About */
+        .about {
+            padding: 72px 0;
+            background: var(--off-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        .section-label {
+            color: var(--cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            color: var(--gray-dark);
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            font-size: 17px;
+            color: var(--gray-medium);
+            margin-bottom: 18px;
+            line-height: 1.7;
+        }
+
+        .features {
+            list-style: none;
+            margin-top: 28px;
+        }
+
+        .features li {
+            padding: 12px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--gray-dark);
+            font-size: 16px;
+        }
+
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        /* Schedule */
+        .schedule {
+            padding: 72px 0;
+        }
+
+        .schedule-list {
+            max-width: 840px;
+            margin: 48px auto 0;
+        }
+
+        .schedule-block {
+            margin-bottom: 32px;
+            padding-left: 32px;
+            border-left: 3px solid var(--cyan-light);
+            position: relative;
+        }
+
+        .schedule-block::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 6px;
+            width: 11px;
+            height: 11px;
+            background: var(--cyan);
+            border-radius: 50%;
+        }
+
+        .schedule-block.featured {
+            border-left-color: var(--cyan);
+            background: var(--cyan-pale);
+            padding: 24px;
+            padding-left: 32px;
+            margin-left: -8px;
+            border-radius: 8px;
+        }
+
+        .schedule-time {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--cyan-dark);
+            margin-bottom: 8px;
+        }
+
+        .schedule-title {
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--gray-dark);
+            margin-bottom: 12px;
+        }
+
+        .schedule-items {
+            list-style: none;
+        }
+
+        .schedule-items li {
+            padding: 6px 0;
+            color: var(--gray-medium);
+            font-size: 15px;
+        }
+
+        .schedule-note {
+            margin-top: 14px;
+            padding: 10px 16px;
+            background: white;
+            border-radius: 6px;
+            color: var(--cyan-dark);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Speakers */
+        .speakers {
+            padding: 72px 0;
+            background: var(--off-white);
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .speaker-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s;
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .speaker-placeholder {
+            width: 100%;
+            height: 260px;
+            background: linear-gradient(135deg, var(--cyan-light), var(--cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .speaker-initials {
+            font-size: 52px;
+            font-weight: 600;
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .speaker-info {
+            padding: 24px;
+        }
+
+        .speaker-info h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+            color: var(--gray-dark);
+        }
+
+        .speaker-role {
+            color: var(--cyan-dark);
+            font-weight: 500;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .speaker-bio {
+            color: var(--gray-medium);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--cyan), var(--cyan-dark));
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 44px;
+            margin-bottom: 18px;
+        }
+
+        .cta p {
+            font-size: 19px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--cyan);
+            padding: 18px 42px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 17px;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-dark);
+            color: white;
+            padding: 56px 0 28px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 42px;
+            margin-bottom: 36px;
+        }
+
+        .footer-brand img {
+            height: 48px;
+            margin-bottom: 16px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .footer-section h4 {
+            font-size: 17px;
+            margin-bottom: 18px;
+            color: var(--cyan-light);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            display: block;
+            padding: 6px 0;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: var(--cyan-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .info-boxes,
+            .speakers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .schedule-block {
+                padding-left: 24px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="./BeYouCare.jpeg" alt="BeYouCare">
+                </div>
+                <a href="#entradas" class="header-btn">Conseguir entrada</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <span class="hero-badge">14 Marzo 2026 · IFA Alicante</span>
+                    <h1>Descubre tu mejor versión <span>este marzo</span></h1>
+                    <p class="hero-text">
+                        Un día completo dedicado al cuidado de tu piel y cabello. Aprende de los mejores expertos, descubre productos innovadores y llévate rutinas que realmente funcionan.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#entradas" class="btn-primary">Reservar entrada</a>
+                        <a href="#info" class="btn-secondary">Ver programa</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./BeYouCare.jpeg" alt="BeYouCare">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section" id="info">
+        <div class="container">
+            <div class="info-boxes">
+                <div class="info-box fade-in">
+                    <h3>Viernes 14 de Marzo</h3>
+                    <p>Jornada completa de 10:00 a 19:00h. Aprovecha todo el día para aprender y conectar.</p>
+                </div>
+                <div class="info-box fade-in">
+                    <h3>IFA Fira Alacant</h3>
+                    <p>Institución Ferial Alicantina. Instalaciones modernas con fácil acceso y parking incluido.</p>
+                </div>
+                <div class="info-box fade-in">
+                    <h3>Entrada: 10 euros</h3>
+                    <p>Acceso completo al evento, todas las charlas, stands de marcas y experiencias incluidas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-label">Sobre el evento</div>
+                    <h2 class="section-title">Más que charlas: una experiencia completa</h2>
+                    <p>
+                        BeYou Care reúne a expertos en dermatología, tricología y cuidado personal para ofrecerte un día lleno de conocimiento práctico y real. No es solo teoría, es aprender rutinas que puedes aplicar desde el día siguiente.
+                    </p>
+                    <p>
+                        Tendrás acceso a charlas especializadas de 30 minutos sobre el cuidado de la piel, tratamientos capilares, productos según tu tipo de piel y cabello, y las últimas tendencias en cosmética.
+                    </p>
+                    <ul class="features">
+                        <li>Charlas con dermatólogos y tricólogos reconocidos</li>
+                        <li>Stands de marcas líderes en cuidado personal</li>
+                        <li>Asesoramiento personalizado sin coste adicional</li>
+                        <li>Prueba productos y participa en demostraciones en vivo</li>
+                        <li>Conoce a otros profesionales y entusiastas del sector</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 700'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23E0F7FA'/%3E%3Cstop offset='100%25' style='stop-color:%23B2EBF2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='700' fill='url(%23g2)' rx='12'/%3E%3C/svg%3E" alt="Experiencia BeYou Care" style="width: 100%; border-radius: 12px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <div class="section-label">Horario</div>
+                <h2 class="section-title">Programa del 14 de marzo</h2>
+            </div>
+            <div class="schedule-list">
+                <div class="schedule-block fade-in">
+                    <div class="schedule-time">10:00 - 11:00</div>
+                    <div class="schedule-title">Recepción y primeros contactos</div>
+                    <ul class="schedule-items">
+                        <li>Entrada escalonada para evitar aglomeraciones</li>
+                        <li>Visita los stands y familiarízate con las marcas</li>
+                        <li>Ambiente relajado, ideal para todo tipo de público</li>
+                    </ul>
+                </div>
+
+                <div class="schedule-block featured fade-in">
+                    <div class="schedule-time">11:00 - 14:00</div>
+                    <div class="schedule-title">Bloque principal de charlas</div>
+                    <ul class="schedule-items">
+                        <li>Cuidado facial: rutinas y productos específicos</li>
+                        <li>Salud capilar: desde la raíz hasta las puntas</li>
+                        <li>Tendencias actuales en cosmética y tratamientos</li>
+                    </ul>
+                    <div class="schedule-note">
+                        Este es el momento de mayor concentración. Recomendamos llegar puntual.
+                    </div>
+                </div>
+
+                <div class="schedule-block fade-in">
+                    <div class="schedule-time">14:00 - 16:00</div>
+                    <div class="schedule-title">Tiempo libre y networking</div>
+                    <ul class="schedule-items">
+                        <li>Explora los stands con calma</li>
+                        <li>Conecta con profesionales y otros asistentes</li>
+                        <li>Prueba productos y recibe muestras</li>
+                        <li>Mini charlas y demostraciones improvisadas</li>
+                    </ul>
+                    <div class="schedule-note">
+                        Momento perfecto para hacer una pausa y aprovechar las zonas de networking.
+                    </div>
+                </div>
+
+                <div class="schedule-block fade-in">
+                    <div class="schedule-time">16:00 - 18:30</div>
+                    <div class="schedule-title">Segundo bloque de charlas</div>
+                    <ul class="schedule-items">
+                        <li>Rutinas prácticas que puedes implementar ya</li>
+                        <li>Consejos directos de profesionales del sector</li>
+                        <li>Charla de cierre con un ponente destacado</li>
+                    </ul>
+                </div>
+
+                <div class="schedule-block fade-in">
+                    <div class="schedule-time">18:30 - 19:00</div>
+                    <div class="schedule-title">Cierre y despedida</div>
+                    <ul class="schedule-items">
+                        <li>Últimas visitas a los stands</li>
+                        <li>Recoge tu material y muestras finales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="speakers">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 24px;">
+                <div class="section-label">Ponentes</div>
+                <h2 class="section-title">Expertos que estarán presentes</h2>
+            </div>
+            <div class="speakers-grid">
+                <div class="speaker-card fade-in">
+                    <div class="speaker-placeholder">
+                        <div class="speaker-initials">SVG</div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Dr. Sergio Vañó Galván</h3>
+                        <div class="speaker-role">Dermatólogo y Tricólogo</div>
+                        <p class="speaker-bio">
+                            Director de la Unidad de Tricología del Hospital Ramón y Cajal y del Grupo Pedro Jaén. Especialista en alopecias y cirugía capilar.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="speaker-card fade-in">
+                    <div class="speaker-placeholder">
+                        <div class="speaker-initials">KLM</div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Dra. Karlexis León Montilla</h3>
+                        <div class="speaker-role">Especialista en Tricología</div>
+                        <p class="speaker-bio">
+                            Enfoque práctico en tratamientos capilares y pérdida de densidad. Experta en soluciones personalizadas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="speaker-card fade-in">
+                    <div class="speaker-placeholder">
+                        <div class="speaker-initials">CVM</div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Dra. Clotilde Vázquez Martínez</h3>
+                        <div class="speaker-role">Nutricionista</div>
+                        <p class="speaker-bio">
+                            Especialista en cómo la alimentación y el metabolismo afectan directamente a la salud de la piel y el cabello.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="speaker-card fade-in">
+                    <div class="speaker-placeholder">
+                        <div class="speaker-initials">VA</div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Dr. Vicent Alonso</h3>
+                        <div class="speaker-role">Dermatólogo</div>
+                        <p class="speaker-bio">
+                            Amplia trayectoria en sector público y privado. Máster en Dermatología Estética y gestión sanitaria.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="speaker-card fade-in">
+                    <div class="speaker-placeholder">
+                        <div class="speaker-initials">BE</div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Dra. Belén Encabo</h3>
+                        <div class="speaker-role">Directora Médica</div>
+                        <p class="speaker-bio">
+                            Al frente de la Unidad de Dermatología de Belaneve en Alicante. Experta en tratamientos avanzados de la piel.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="speaker-card fade-in">
+    <div class="speaker-placeholder">
+        <div class="speaker-initials">DJ</div>
+    </div>
+    <div class="speaker-info">
+        <h3>Dr. Jaén</h3>
+        <div class="speaker-role">Dermatólogo · Profesor Universitario</div>
+        <p class="speaker-bio">
+            Licenciado en Medicina y Cirugía, especialista en Dermatología. Profesor titular de la Universidad de Alcalá y presidente de la Academia Española de Dermatología y Venereología. Autoridad internacional en investigación dermatológica y autor de numerosas publicaciones científicas y del libro <em>Una piel para toda la vida</em>.
+        </p>
+    </div>
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="entradas">
+        <div class="container">
+            <h2>¿Preparado para dar el siguiente paso?</h2>
+            <p>Plazas limitadas. Reserva tu entrada ahora y no te quedes fuera.</p>
+            <a href="https://www.eventbrite.es/" target="_blank" class="btn-white">Reservar entrada - 10€</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="./BeYouCare.jpeg" alt="BeYouCare">
+                    <p>Un evento dedicado a quienes se toman en serio el cuidado personal. Aprende, descubre y conecta con profesionales y marcas líderes del sector.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#info">Información</a></li>
+                        <li><a href="#horario">Horario</a></li>
+                        <li><a href="#speakers">Ponentes</a></li>
+                        <li><a href="#entradas">Entradas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">Ubicación</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Escríbenos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2026 BeYou Care. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll header effect
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Fade in on scroll
+        function checkFadeIn() {
+            var elements = document.querySelectorAll('.fade-in');
+            var windowHeight = window.innerHeight;
+            
+            elements.forEach(function(element) {
+                var elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkFadeIn);
+        checkFadeIn();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
